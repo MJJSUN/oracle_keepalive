@@ -14,4 +14,7 @@ JVM_XMX：你想使用的内存大小。例如：6G。
 
 CPU_LOAD：每个CPU核心的使用率[0,1]。例如：使用率设置为0.1，则每个核心都将使用它10%的CPU资源。
 
-
+### 自行构建
+```
+docker buildx build --platform linux/amd64,linux/arm64 .
+```
