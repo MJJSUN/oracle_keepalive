@@ -16,5 +16,7 @@ CPU_LOAD：每个CPU核心的使用率[0,1]。例如：使用率设置为0.1，�
 
 ### 自行构建
 ```
+git clone -b master https://github.com/MJJSUN/oracle_keepalive.git
+cd oracle_keepalive
 docker buildx build --platform linux/amd64,linux/arm64 .
 ```
