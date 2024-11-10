@@ -6,9 +6,9 @@
 docker run -d \
   --name mm \
   -e JVM_XMX=6G \
-  -e CPU_LOAD=0.1 \
+  -e CPU_LOAD=0.2 \
   --restart always \
-  sunssr/fixed-memory-hog:1.1.1
+  sunssr/fixed-memory-hog:1.1.2
 ```
 JVM_XMX：你想使用的内存大小。例如：6G。
 
