@@ -8,10 +8,10 @@ public class FixedMemoryHog {
 
         // 获取 JVM 允许的最大堆内存（-Xmx）
         long maxMemory = Runtime.getRuntime().maxMemory();
-        System.out.println("JVM 最大堆内存: " + maxMemory / (1024 * 1024 * 1024) + " GB");
+        System.out.println("JVM 最大堆内存: " + (double)maxMemory / (1024 * 1024 * 1024) + " GB");
 
-        // 计算允许分配的最大内存，预留50M用于其他操作，避免 OutOfMemoryError
-        long usableMemory = maxMemory - (50 * 1024 * 1024); // 预留50MB
+        // 计算允许分配的最大内存，预留256M用于其他操作，避免 OutOfMemoryError
+        long usableMemory = maxMemory - (256 * 1024 * 1024); // 预留256MB
 
         // 设置每块内存的分配大小，避免超出单个数组限制
         final int allocationSize = 1024 * 1024 * 64; // 每次分配64MB
