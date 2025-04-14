@@ -8,7 +8,7 @@ docker run -d \
   -e JVM_XMX=512m \
   -e CPU_LOAD=0.2 \
   --restart always \
-  sunssr/fixed-memory-hog:1.1.3
+  sunssr/fixed-memory-hog:latest
 ```
 JVM_XMX：你想使用的内存大小。例如：6G。
 
@@ -18,5 +18,5 @@ CPU_LOAD：每个CPU核心的使用率[0,1]。例如：使用率设置为0.1，�
 ```
 git clone -b master https://github.com/MJJSUN/oracle_keepalive.git
 cd oracle_keepalive
-docker buildx build --platform linux/amd64,linux/arm64 .
+docker buildx build --platform linux/amd64,linux/arm64 <-t [tag]> <--load/--push> .
 ```
