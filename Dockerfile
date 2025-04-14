@@ -17,5 +17,4 @@ CMD ["sh", "-c", "\
   else \
     JVM_XMX_MB=${JVM_XMX_MB%[a-zA-Z]*}; \
   fi; \
-  JVM_XMX_FINAL=$(($JVM_XMX_MB + 256)); \
-  java -Xms${JVM_XMX_FINAL}m -Xmx${JVM_XMX_FINAL}m -XX:+UseG1GC FixedMemoryHog ${CPU_LOAD:-0.1}"]
+  java -Xms${JVM_XMX_MB}m -XX:MaxDirectMemorySize=${JVM_XMX_MB}m FixedMemoryHog ${CPU_LOAD:-0.1}"]
